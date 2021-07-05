@@ -47,6 +47,13 @@ function draw() {
         x += 40;
         count += 40;
     }
+    //  TODO:
+    // =========================
+    //  Set Constraints for the offset, of the Wave to bounce back to the higher section gradually:
+    offset += 5;
+
+
+
 
     // ellipse(80, y1, 80, 80);
     // ellipse(120, y2, 80, 80);
