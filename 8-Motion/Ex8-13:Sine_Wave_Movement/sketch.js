@@ -50,7 +50,7 @@ function draw() {
     //  TODO:
     // =========================
     //  Set Constraints for the offset, of the Wave to bounce back to the higher section gradually:
-    offset += 5;
+
 
 
 
