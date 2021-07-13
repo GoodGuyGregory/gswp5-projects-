@@ -64,6 +64,7 @@ function setup() {
         stroke(randomColor);
         fill(randomColor);
     }
+
     setInterval(changeColor, 30);
     background(204);
 }
