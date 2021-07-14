@@ -16,7 +16,7 @@ function draw() {
     //  Body of the owl
     line(0, -35, 0, -65);
     noStroke();
-    fill(204);
+    fill(255);
     ellipse(-17.5, -65, 35, 35); // left eye
     ellipse(17.5, -65, 35, 35);  // right eye
     arc(0, -65, 70, 70, 0, PI); // chin
