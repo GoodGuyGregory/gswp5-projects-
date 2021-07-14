@@ -1,27 +1,39 @@
 //  Variables:
 
+//  creates a hoisted variable
+var bug;
 
 
 function setup() {
     createCanvas(1980, 1020);
+    //  placed here to prevent redrawling of the canvas
+    background(204);
+    //  creates object and pass in parameters
+    bug = new JitterBug(width / 2, height / 2, 60);
 
 }
 
 function draw() {
-    background(204);
-    //  translates the origin from 0,0 to 110,110
-    translate(110, 110);
-    stroke(0);
-    strokeWeight(70);
-    //  Body of the owl
-    line(0, -35, 0, -65);
-    noStroke();
-    fill(255);
-    ellipse(-17.5, -65, 35, 35); // left eye
-    ellipse(17.5, -65, 35, 35);  // right eye
-    arc(0, -65, 70, 70, 0, PI); // chin
-    fill(0);
-    ellipse(-14, -65, 8, 8); // left eye
-    ellipse(14, -65, 8, 8); // right eye
-    quad(0, -58, 4, -51, 0, -44, -4, -51);
+    //  calls the methods of the Jitterbug object below
+    bug.move();
+    bug.display();
+}
+
+//  jitterbug constructor:
+//  define object
+function JitterBug(tempX, tempY, tempDiameter) {
+    this.x = tempX;
+    this.y = tempY;
+    this.diameter = tempDiameter;
+    this.speed = 2.5;
+
+    //  object methods
+    this.move = function () {
+        this.x += random(-this.speed, this.speed);
+        this.y += random(-this.speed, this.speed);
+    };
+
+    this.display = function () {
+        ellipse(this.x, this.y, this.diameter, this.diameter);
+    };
 }
