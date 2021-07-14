@@ -19,7 +19,7 @@ function draw() {
     // }
 
     //  DRAWS A WHOLE ANIMAL KINGDOM OF OWLS: using the random variable elements and sizes
-    // randomseed: stops the random numbders for some reason
+    // randomseed: stops the random spazms
     randomSeed(0);
     for (var i = 35; i < width + 40; i += 40) {
         //  uses int to round to a whole number with decimal truncation 
