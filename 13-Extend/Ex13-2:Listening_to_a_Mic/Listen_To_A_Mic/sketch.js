@@ -7,29 +7,6 @@ function setup() {
   mic.start();
   background(0);
 
-  //  COLOR Functionality:
-  // =======================================
-  let colors = [];
-
-  //  Neon Purple:
-  let neonPurpleNum = color(255, 0, 232);
-
-  //  Neon Blue:
-  let neonBlueNum = color(0, 255, 255);
-
-  //  Neon yellow:
-  let neonYellowNum = color(255, 255, 38);
-
-  colors.push(neonPurpleNum);
-  colors.push(neonBlueNum);
-  colors.push(neonYellowNum);
-
-  function changeColor() {
-    randomColor = colors[Math.floor(Math.random() * colors.length)];
-    fill(randomColor);
-  }
-
-
 }
 
 
